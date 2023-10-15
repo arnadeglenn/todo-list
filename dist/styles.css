@@ -164,8 +164,6 @@ dialog {
     height: 45vh;
     width: 40vw;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
     padding: 15px;
     font-size: 2rem;
     background-color: var(--white-emerald);
