@@ -179,7 +179,7 @@ dialog h2 {
     color: var(--dark-green);
 }
 
-.project-modal {
+.project-modal, .project-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
