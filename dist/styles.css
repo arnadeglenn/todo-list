@@ -8,6 +8,7 @@
    --mid-light-green: #34d399;
    --light-green: #6ee7b7;
    --white-green: #dcfce7;
+   --white-emerald: #d1fae5;
 }
 
 * {
@@ -81,6 +82,16 @@ body {
     border: 1px solid var(--mid-light-green);
 }
 
+.project-item:hover {
+    background-color: var(--white-emerald);
+    cursor: pointer;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: var(--mid-dark-green);
+}
+
 .add-project, .add-item {
     margin-top: 20px;
     display: flex;
@@ -132,6 +143,50 @@ svg:hover {
     fill: var(--mid-light-green);
 }
 
-@media screen and (max-width: 740px) {
+.date-input:hover {
+    background-color: var(--mid-dark-green);
+    cursor: pointer;
+}
+
+.list-item:hover .date-input {
+    background-color: var(--mid-dark-green);
+    color: var(--white-emerald); /* You may want to adjust the text color */
+}
+
+.add-project p, .add-item p:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: var(--dark-green);
+        display: flex;
+        flex-direction: column;
+    }
     
+    .projects, .to-do-list {
+        max-height: 100%;
+        padding: 30px 30px 30px 30px; 
+        font-size: 1rem;
+    }
+    
+    .projects {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 5px var(--mid-green);
+        color: var(--dark-green);
+        background-color: var(--white-green);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .to-do-list {
+        color: var(--white-green);
+        width: 100%;
+        height: auto;
+    }
+
+    .project-item, .list-item {
+        flex-wrap: wrap;
+    }
 }
