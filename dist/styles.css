@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;700&display=swap');
+
+:root {
+   --body-font: 'Mohave', sans-serif;
+   --dark-green: #022c22;
+   --mid-dark-green: #134e4a;
+   --mid-green: #10b981;
+   --mid-light-green: #34d399;
+   --light-green: #6ee7b7;
+   --white-green: #dcfce7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--body-font);
+}
+
+body {
+    background-color: var(--dark-green);
+    display: flex;
+}
+
+.projects, .to-do-list {
+    height: 100vh;
+    max-height: 100%;
+    padding: 30px 30px 30px 30px; 
+    font-size: 1.3rem;
+}
+
+.projects {
+    width: 25vw;
+    box-shadow: 0px 0px 5px var(--mid-green);
+    color: var(--dark-green);
+    background-color: var(--white-green);
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .title {
+    border-bottom: solid 2px var(--mid-dark-green);
+    padding: 10px;
+}
+
+.to-do-list .title {
+    border-bottom: solid 2px var(--mid-dark-green);
+    padding: 10px;
+}
+
+.list-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.to-do-list {
+    width: 70vw;
+    color: var(--white-green);
+}
+
+.project-list, .list-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.project-item, .list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+.list-item {
+    border: 1px solid var(--mid-light-green);
+}
+
+.add-project, .add-item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+    color: var(--mid-dark-green);
+}
+
+.add-item {
+    color: var(--white-green);
+}
+
+.checkbox {
+    min-height: 15px;
+    min-width: 15px;
+    border: 2px solid var(--mid-dark-green);
+}
+
+.list-item .checkbox {
+    border: 1px solid var(--mid-light-green);
+}
+
+svg {
+    height: 1.3rem;
+    width: auto;
+    margin-left: auto;
+    fill: var(--mid-green);
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+.icon-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.date-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--dark-green);
+    color: var(--white-green);
+    border: none;
+    fill: var(--mid-light-green);
+}
+
+@media screen and (max-width: 740px) {
+    
+}
