@@ -157,6 +157,85 @@ svg:hover {
     cursor: pointer;
 }
 
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 45vh;
+    width: 40vw;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 2rem;
+    background-color: var(--white-emerald);
+    border: 3px solid var(--dark-green);
+}
+
+dialog::backdrop {
+    background: #022c22;
+    opacity: .6;
+}
+
+dialog h2 {
+    color: var(--dark-green);
+}
+
+.project-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-name-box, .project-description-box {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: var(--white-emerald);
+    height: 2.3rem;
+    border: none;
+    border-bottom: 1px solid var(--dark-green);
+    padding: 3px 8px 3px 8px;
+    font-family: inherit;
+    font-size: 1.5rem;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--dark-green);
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: var(--dark-green);
+    border: 3px solid var(--light-green);
+    color: var(--white-green);
+}
+
+.cancel-button {
+    background-color: rgb(160, 14, 14);
+    border: 3px solid var(--dark-green);
+    color: var(--white-emerald);
+}
+
+
 @media screen and (max-width: 1000px) {
     body {
         background-color: var(--dark-green);
@@ -188,5 +267,10 @@ svg:hover {
 
     .project-item, .list-item {
         flex-wrap: wrap;
+    }
+
+    dialog {
+        height: 60vh;
+        width: 80vw;
     }
 }
