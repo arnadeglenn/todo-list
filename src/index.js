@@ -5,3 +5,9 @@ addProject.addEventListener('click', (e) => {
     projectDialog.showModal();
 })
 
+const addToDo = document.querySelector('.add-item-js');
+
+addToDo.addEventListener('click', (e)=> {
+    projectDialog.showModal();
+})
+
