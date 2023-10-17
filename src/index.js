@@ -1,3 +1,5 @@
+import { renderToDo, renderAddToDo } from "./render-to-do";
+
 const projectDialog = document.getElementById("project-addition");
 const addProject = document.getElementById('add-project-button');
 
@@ -11,3 +13,5 @@ addToDo.addEventListener('click', (e)=> {
     projectDialog.showModal();
 })
 
+renderToDo();
+renderAddToDo();
