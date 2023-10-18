@@ -11,4 +11,14 @@ let exampleToDo2 = new ToDoItem('Example To-Do 2', '2023-10-15', '1')
 
 const toDoList = [exampleToDo1, exampleToDo2];
 
-export {toDoList};
+const addToDoObject = function(dataIndex) {
+    const inputField = document.querySelector(`.add-to-do-input[data-index="${dataIndex}"]`);
+    const dateField = document.querySelector(`.add-to-do-date[data-index="${dataIndex}"]`);
+    let toDoItem = inputField.value;
+    let toDoDate = dateField.value;
+    let toDoDataIndex = toDoList.length;
+    let newToDo = new ToDoItem(toDoItem, toDoDate, toDoDataIndex);
+    toDoList.push(newToDo );
+}
+
+export {toDoList, addToDoObject};

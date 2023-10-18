@@ -56,6 +56,7 @@ let renderToDo = function() {
 let renderAddToDo = function (dataIndex) {
     const listItem = document.createElement('div');
     listItem.classList.add('list-item');
+    listItem.classList.add('add-to-do-modal')
     listItem.setAttribute('data-index', `${dataIndex}`);
     fullToDoList.appendChild(listItem);
 
@@ -65,10 +66,11 @@ let renderAddToDo = function (dataIndex) {
 
     const inputField = document.createElement('input');
     inputField.classList.add('to-do-input');
+    inputField.classList.add('add-to-do-input')
     inputField.setAttribute('type', 'text');
-    inputField.setAttribute('placeholder', 'Example Item');
+    inputField.setAttribute('placeholder', 'What Do You Need to Do?');
     inputField.setAttribute('data-index', `${dataIndex}`);
-    inputField.value = "What Do You Need to Do?";
+    // inputField.value = "What Do You Need to Do?";
     listItem.appendChild(inputField);
 
     const iconBox = document.createElement('div');
@@ -77,6 +79,7 @@ let renderAddToDo = function (dataIndex) {
 
     const dateInput = document.createElement('input');
     dateInput.classList.add('date-input');
+    dateInput.classList.add('add-to-do-date')
     dateInput.setAttribute('type', 'date');
     dateInput.setAttribute('data-index', `${dataIndex}`);
     dateInput.value = getCurrentDate();
@@ -85,6 +88,7 @@ let renderAddToDo = function (dataIndex) {
     const addToDoBtn = document.createElement('button');
     addToDoBtn.classList.add('submit-button');
     addToDoBtn.setAttribute('type', 'submit');
+    addToDoBtn.setAttribute('data-index', `${dataIndex}`);
     addToDoBtn.setAttribute('id', 'to-do-submit')
     addToDoBtn.innerHTML = 'Submit';
     iconBox.appendChild(addToDoBtn);
