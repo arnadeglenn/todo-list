@@ -15,12 +15,10 @@ let renderToDo = function() {
         checkbox.classList.add('checkbox');
         listItem.appendChild(checkbox);
 
-        const inputField = document.createElement('input');
+        const inputField = document.createElement('div');
         inputField.classList.add('to-do-input');
-        inputField.setAttribute('type', 'text');
-        inputField.setAttribute('placeholder', 'Example Item');
         inputField.setAttribute('data-index', `${i}`);
-        inputField.value = toDoList[i].listItem;
+        inputField.innerHTML = toDoList[i].listItem;
         listItem.appendChild(inputField);
 
         const iconBox = document.createElement('div');
