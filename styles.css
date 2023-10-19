@@ -88,7 +88,6 @@ body {
 }
 
 .list-item:hover {
-    cursor: pointer;
     background-color: var(--mid-dark-green);
 }
 
@@ -109,6 +108,10 @@ body {
     min-height: 15px;
     min-width: 15px;
     border: 2px solid var(--mid-dark-green);
+}
+
+.checkbox:hover {
+    cursor: pointer;
 }
 
 .list-item .checkbox {
@@ -143,14 +146,14 @@ svg:hover {
     fill: var(--mid-light-green);
 }
 
-.date-input:hover {
+/* .date-input:hover {
     background-color: var(--mid-dark-green);
     cursor: pointer;
-}
+} */
 
-.list-item:hover .date-input {
-    background-color: var(--mid-dark-green);
-    color: var(--white-emerald); /* You may want to adjust the text color */
+.to-do-input, .date-input:hover {
+    color: var(--white-emerald);
+    cursor: pointer;
 }
 
 .add-project p, .add-item p:hover {
