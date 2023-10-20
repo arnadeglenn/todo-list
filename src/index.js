@@ -1,6 +1,6 @@
 import { renderToDo, renderAddToDo } from "./render-to-do";
 import { toDoList, addToDoObject } from "./add-to-do";
-import { editToDo, editButtonDOM } from "./edit-delete-todo";
+import { deleteToDoDOM, editButtonDOM } from "./edit-delete-todo";
 
 const projectDialog = document.getElementById("project-addition");
 const addProject = document.getElementById('add-project-button');
@@ -29,10 +29,12 @@ addToDo.addEventListener('click', (e)=> {
         renderToDo();
         console.log(toDoList);
         editButtonDOM();
+        deleteToDoDOM();
     })
     cancelToDo.addEventListener('click', (e) => {
         listItems.removeChild(addToDoModal);
         editButtonDOM();
+        deleteToDoDOM();
     })
 })
 
@@ -41,5 +43,6 @@ addToDo.addEventListener('click', (e)=> {
 
 renderToDo();
 editButtonDOM();
+deleteToDoDOM();
 
 export {toDoListLength}

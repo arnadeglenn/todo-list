@@ -33,15 +33,40 @@ const editButtonDOM = function () {
             renderToDo();
             console.log(toDoList);
             editButtonDOM();
+            deleteToDoDOM();
         })
         cancelToDo.addEventListener('click', (e) => {
             listItems.innerHTML = '';
             renderToDo();
             console.log(toDoList);
             editButtonDOM();
+            deleteToDoDOM();
         })
     } )
 })
 }
 
-export {editToDo, editButtonDOM};
+const deleteToDo = function(event) {
+    if (event.target.classList.contains('delete-svg')) {
+        const svgBtn = event.target;
+        const listNumber = svgBtn.getAttribute('data-index');
+        const listItem = document.querySelector(`.full-to-do[data-index="${listNumber}"]`);
+        console.log(listNumber);
+        toDoList.splice(listNumber, 1);
+    }
+}
+
+const deleteToDoDOM = function() {
+    const deleteSVG = document.querySelectorAll('.delete-svg');
+    deleteSVG.forEach( (deleteBtn) => {
+        deleteBtn.addEventListener('click', (e) => {
+            deleteToDo(e);
+            listItems.innerHTML = '';
+            renderToDo();
+            editButtonDOM();
+            deleteToDoDOM();
+        })
+    })
+}
+
+export {editToDo, editButtonDOM, deleteToDoDOM};
