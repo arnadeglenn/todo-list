@@ -102,6 +102,53 @@ let renderAddToDo = function (dataIndex) {
     
 }
 
-export {renderToDo, renderAddToDo};
+let editToDoItem = function (editNode, dataIndex) {
+    editNode.classList.add('list-item');
+    editNode.classList.add('add-to-do-modal')
+    editNode.setAttribute('data-index', `${dataIndex}`);
+
+    const checkbox = document.createElement('div');
+    checkbox.classList.add('checkbox');
+    editNode.appendChild(checkbox);
+
+    const inputField = document.createElement('input');
+    inputField.classList.add('to-do-input');
+    inputField.classList.add('add-to-do-input')
+    inputField.setAttribute('type', 'text');
+    inputField.setAttribute('placeholder', 'What Do You Need to Do?');
+    inputField.setAttribute('data-index', `${dataIndex}`);
+    // inputField.value = "What Do You Need to Do?";
+    editNode.appendChild(inputField);
+
+    const iconBox = document.createElement('div');
+    iconBox.classList.add('icon-box');
+    editNode.appendChild(iconBox);
+
+    const dateInput = document.createElement('input');
+    dateInput.classList.add('date-input');
+    dateInput.classList.add('add-to-do-date')
+    dateInput.setAttribute('type', 'date');
+    dateInput.setAttribute('data-index', `${dataIndex}`);
+    dateInput.value = getCurrentDate();
+    iconBox.appendChild(dateInput);
+
+    const addToDoBtn = document.createElement('button');
+    addToDoBtn.classList.add('submit-button');
+    addToDoBtn.setAttribute('type', 'submit');
+    addToDoBtn.setAttribute('data-index', `${dataIndex}`);
+    addToDoBtn.setAttribute('id', 'to-do-submit')
+    addToDoBtn.innerHTML = 'Submit';
+    iconBox.appendChild(addToDoBtn);
+
+    const addCancelToDoBtn = document.createElement('button');
+    addCancelToDoBtn.classList.add('cancel-button');
+    addCancelToDoBtn.setAttribute('type', 'submit');
+    addCancelToDoBtn.setAttribute('id', 'to-do-cancel')
+    addCancelToDoBtn.innerHTML = 'Cancel';
+    iconBox.appendChild(addCancelToDoBtn);
+    
+}
+
+export {renderToDo, renderAddToDo, editToDoItem};
 
 

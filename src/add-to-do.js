@@ -21,4 +21,14 @@ const addToDoObject = function(dataIndex) {
     toDoList.push(newToDo );
 }
 
-export {toDoList, addToDoObject};
+const editToDoObject = function(dataIndexNum) {
+    const inputField = document.querySelector(`.add-to-do-input[data-index="${dataIndexNum}"]`);
+    const dateField = document.querySelector(`.add-to-do-date[data-index="${dataIndexNum}"]`);
+    toDoList[dataIndexNum].listItem = inputField.value;
+    toDoList[dataIndexNum].date = dateField.value;
+    toDoList[dataIndexNum].dataIndex = `${dataIndexNum}`;
+
+
+}
+
+export {toDoList, addToDoObject, editToDoObject};
