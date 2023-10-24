@@ -10,17 +10,13 @@
 <body>
     <div class="projects">
         <div class="title">
-            <h1>Projects</h1>
+            <h1 >Projects</h1>
             <p>Create a list of projects!</p>
         </div>
         <div class="list-box">
             <div class="project-list">
                 <div class="project-item">
                     <p>Main To-Do Items</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trash-can-outline</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" /></svg>
-                </div>
-                <div class="project-item">
-                    <p>Secondary To-Do Items</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trash-can-outline</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" /></svg>
                 </div>
             </div>
@@ -31,8 +27,8 @@
     </div>
     <div class="to-do-list">
         <div class="title">
-            <h1>To-Do List</h1>
-            <p>Create your to-do list to finish up this project!</p>
+            <h1 class="project-title">To-Do List</h1>
+            <p class = "project-description">Create your to-do list to finish up this project!</p>
         </div>
         <div class="list-box">
             <div class="list-items">
@@ -48,11 +44,11 @@
             <form class="project-form" method="dialog">
                 <div class="project-name-box">
                     <label for="project-name">Project Name</label>
-                    <input class="project-input" type="text" id="project-name">
+                    <input class="project-input" type="text" id="project-name-input">
                 </div>
                 <div class="project-description-box">
                     <label for="project-description">Project Description</label>
-                    <input class="project-input" type="text" id="project-description">
+                    <input class="project-input" type="text" id="project-description-input">
                 </div>
                 <div class="button-box">
                     <button type="submit" class= "submit-button" id="project-submit">Submit</button>
