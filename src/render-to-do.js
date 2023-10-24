@@ -12,7 +12,8 @@ let renderToDo = function() {
         listItem.setAttribute('data-index', `${i}`);
         fullToDoList.appendChild(listItem);
 
-        const checkbox = document.createElement('div');
+        const checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
         checkbox.classList.add('checkbox');
         listItem.appendChild(checkbox);
 
@@ -61,7 +62,8 @@ let renderAddToDo = function (dataIndex) {
     listItem.setAttribute('data-index', `${dataIndex}`);
     fullToDoList.appendChild(listItem);
 
-    const checkbox = document.createElement('div');
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
     checkbox.classList.add('checkbox');
     listItem.appendChild(checkbox);
 
@@ -108,8 +110,10 @@ let editToDoItem = function (editNode, dataIndex) {
     editNode.classList.add('add-to-do-modal')
     editNode.setAttribute('data-index', `${dataIndex}`);
 
-    const checkbox = document.createElement('div');
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
     checkbox.classList.add('checkbox');
+    
     editNode.appendChild(checkbox);
 
     const inputField = document.createElement('input');
@@ -151,5 +155,3 @@ let editToDoItem = function (editNode, dataIndex) {
 }
 
 export {renderToDo, renderAddToDo, editToDoItem};
-
-
