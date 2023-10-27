@@ -1,6 +1,7 @@
 import { renderToDo, renderAddToDo } from "./render-to-do";
 import { toDoList, addToDoObject } from "./add-to-do";
 import { deleteToDoDOM, editButtonDOM } from "./edit-delete-todo";
+import { populateStorage, getStorage } from "./local-storage";
 
 const projectDialog = document.getElementById("project-addition");
 const addProject = document.getElementById('add-project-button');
@@ -27,6 +28,7 @@ addToDo.addEventListener('click', (e)=> {
         addToDoObject(toDoListLength);
         listItems.innerHTML = '';
         renderToDo();
+        populateStorage();
         console.log(toDoList);
         editButtonDOM();
         deleteToDoDOM();
@@ -38,11 +40,14 @@ addToDo.addEventListener('click', (e)=> {
     })
 })
 
+window.addEventListener('load', (e) => {
+    getStorage();
+    renderToDo();
+    editButtonDOM();
+    deleteToDoDOM();
+})
 
 
 
-renderToDo();
-editButtonDOM();
-deleteToDoDOM();
 
 export {toDoListLength}

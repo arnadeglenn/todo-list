@@ -9,7 +9,7 @@ class ToDoItem {
 let exampleToDo1 = new ToDoItem('Example To-Do', '2023-10-14', '0')
 let exampleToDo2 = new ToDoItem('Example To-Do 2', '2023-10-15', '1')
 
-const toDoList = [exampleToDo1, exampleToDo2];
+let toDoList = [exampleToDo1, exampleToDo2];
 
 const addToDoObject = function(dataIndex) {
     const inputField = document.querySelector(`.add-to-do-input[data-index="${dataIndex}"]`);

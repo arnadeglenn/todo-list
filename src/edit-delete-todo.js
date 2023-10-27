@@ -1,6 +1,7 @@
 import { renderToDo, renderAddToDo, editToDoItem } from "./render-to-do";
 import { addToDoObject, toDoList, editToDoObject } from "./add-to-do";
 import { toDoListLength } from ".";
+import { getStorage, populateStorage } from "./local-storage";
 
 const listItems = document.querySelector('.list-items');
 
@@ -30,6 +31,7 @@ const editButtonDOM = function () {
         submitToDo.addEventListener('click', (e) => {
             editToDoObject(listNumber);
             listItems.innerHTML = '';
+            populateStorage();
             renderToDo();
             console.log(toDoList);
             editButtonDOM();
@@ -62,6 +64,7 @@ const deleteToDoDOM = function() {
         deleteBtn.addEventListener('click', (e) => {
             deleteToDo(e);
             listItems.innerHTML = '';
+            populateStorage();
             renderToDo();
             editButtonDOM();
             deleteToDoDOM();
